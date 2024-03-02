@@ -1,10 +1,10 @@
-#include <GL/glut.h> //¨Ï¥ÎGLUT¥~±¾
-#include <math.h> //¬°¤Fcos()&sin()
+#include <GL/glut.h> //ä½¿ç”¨GLUTå¤–æŽ›
+#include <math.h> //ç‚ºäº†cos()&sin()
 void myCircle(float cx, float cy, float r){
     glBegin(GL_POLYGON);
-    for(float a=0; a<=3.14*2; a+=0.1){//«Ü¦h¤£¦P¨¤«×
+    for(float a=0; a<=3.14*2; a+=0.1){//å¾ˆå¤šä¸åŒè§’åº¦
         glVertex2f(r*cos(a)+cx, r*sin(a)+cy );
-    }///¤T¨¤¨ç¼Æ¶W¦n¥Î¡Ax=cos(a), y=sin(a)
+    }///ä¸‰è§’å‡½æ•¸è¶…å¥½ç”¨ï¼Œx=cos(a), y=sin(a)
     glEnd();
 }
 
@@ -13,19 +13,19 @@ void display()
 
     glBegin(GL_POLYGON);
         glColor3f(1, 1, 1); myCircle(0, 0, 0.7);//face
-        glColor3f(0, 0, 0); myCircle(-0.3, 0.25, 0.1);//eye1(x, y, ¤j¤p)
+        glColor3f(0, 0, 0); myCircle(-0.3, 0.25, 0.1);//eye1(x, y, å¤§å°)
         glColor3f(0, 0, 0); myCircle(0.3, 0.25, 0.1);//eye2
 
-        glColor3f(0, 0, 0); myCircle(0, -0.35, 0.45);//nose©³¦â
+        glColor3f(0, 0, 0); myCircle(0, -0.35, 0.45);//noseåº•è‰²
         glColor3f(1, 1, 1); myCircle(-0.19, -0.35, 0.1);//nose
         glColor3f(1, 1, 1); myCircle(0.19, -0.35, 0.1);
 
-        glColor3f(1, 1, 1);//leftear
+        glColor3f(1, 1, 1);//left ear
         glVertex2f((91-200)/200.0, -(62-200)/200.0);
         glVertex2f((147-200)/200.0, -(62-200)/200.0);
         glVertex2f((91-200)/200.0, -(100-200)/200.0);
 
-        glColor3f(1, 1, 1);//rightear
+        glColor3f(1, 1, 1);//right ear
         glVertex2f((246-200)/200.0, -(62-200)/200.0);
         glVertex2f((308-200)/200.0, -(62-200)/200.0);
         glVertex2f((308-200)/200.0, -(106-200)/200.0);
@@ -37,12 +37,12 @@ void display()
  //glVertex2f((58-200)/200.0, -(183-199)/200.0);
 ///glVertex2f((X-200)/200.0, -(Y-200)/200.0);
 
-int main(int argc, char *argv[]) //§Ú­Ìªºmain¨ç¦¡
+int main(int argc, char *argv[]) //æˆ‘å€‘çš„mainå‡½å¼
 {
-    glutInit(&argc, argv); ///ªì©l¤Æ GLUT
+    glutInit(&argc, argv); ///åˆå§‹åŒ– GLUT
     glutInitDisplayMode(GLUT_RGB | GLUT_DOUBLE | GLUT_DEPTH);
-    glutCreateWindow("11160313"); ///«Ø¥ßµøµ¡
-    glutDisplayFunc(display); ///³]©w­nµe¹Ïªºdisplay¨ç¦¡
-    glutMainLoop(); ///¥D­n°j°é
+    glutCreateWindow("11160313"); ///å»ºç«‹è¦–çª—
+    glutDisplayFunc(display); ///è¨­å®šè¦ç•«åœ–çš„displayå‡½å¼
+    glutMainLoop(); ///ä¸»è¦è¿´åœˆ
 
 }
