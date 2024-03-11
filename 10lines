@@ -1,6 +1,7 @@
 #include <GL/glut.h> ///使用GLUT外掛
 void display()
-    
+{
+
 }
 
 int main(int argc, char *argv[])
